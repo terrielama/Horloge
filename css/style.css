@@ -8,29 +8,35 @@
 body
 {
     background: url('/images/night.jpg'); 
-    background: cover;
-    background-size: 100%;
+    /* Fixer l'arrière-plan pour éviter le défilement avec le contenu */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* Centrer l'image horizontalement et verticalement */
+    background-position: center center;
+    background-size: cover;
+    /* Fixer l'arrière-plan pour éviter le défilement avec le contenu */
+    background-attachment: fixed;
 
 }
 
 
 .horloge {
-    width: 300px;
+    width: 450px;
    height: 100px;
    border: 5px solid #060E11;
    border-radius: 10px;
    text-align: center;
    margin: 250px auto;
-   padding: 10px;
+   padding: 150px;
    backdrop-filter: blur(7px);
 
 }
 
 #heure 
 {
-    font-size: 48px;
+    font-size: 70px;
     color: #000000;
-    margin: 5px;
+    margin-top: -25px;
     border-bottom:1.5px solid black ; /*mettre une ligne*/
     transition: 300ms;
 
@@ -39,10 +45,33 @@ body
 #date
 {
 
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 800;
     color: #000000;
     transition: 700ms;
- 
+}
+
+@media screen and (max-width: 1024px) {
+
+    .horloge {
+        margin-top: 260px;
+        width: 300px;
+       height: 150px;
+       padding: 10px;
+
+    
+    }
+    
+    #heure 
+    {
+        font-size: 40px;
+        margin: 20px;
+    
+    }
+    
+    #date
+{
+    font-size: 30px;
+}
 
 }
