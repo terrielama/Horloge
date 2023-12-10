@@ -16,6 +16,7 @@ function mettreAJourHeure()
     document.getElementById("heure").textContent = heureFormattee;
     document.getElementById("date").textContent = dateFormattee;
 }
+// met à jour le contenu des éléments HTML ayant pour identifiants "heure" et "date" en utilisant document.getElementById().textContent.
 
 function ajouterZero(nombre) {
     if (nombre < 10) {
@@ -24,5 +25,7 @@ function ajouterZero(nombre) {
         return nombre;
     }
 }
+// Si le nombre est inférieur à 10, elle ajoute un zéro devant le nombre
 
 setInterval(mettreAJourHeure, 1000);
+// C'est une fonction JavaScript qui exécute la fonction mettreAJourHeure toutes les 1000 millisecondes (soit toutes les secondes), ce qui assure la mise à jour régulière de l'heure et de la date.
